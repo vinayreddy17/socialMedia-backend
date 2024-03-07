@@ -10,9 +10,9 @@ import profileRoutes from './routes/profileRoutes.js';
 
 const app = express(); //initializing the server
 app.use(cors({
-    origin: '*', // Replace with your frontend origin
-    credentials: true, // Allow credentials
-  }));
+  origin: 'https://finnews-irajfls7s-vinayreddy17.vercel.app',
+  credentials: true // Allow credentials (cookies, authorization headers, etc.)
+}));//i have some doubts about why app.use(cors()) is not working
 
   // connecting mongodb
 mongoose.connect(process.env.MONGO_URL)
