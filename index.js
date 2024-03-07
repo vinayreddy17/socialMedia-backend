@@ -15,7 +15,7 @@ app.use(cors({
 }));//i have some doubts about why app.use(cors()) is not working
  console.log(process.env.JWT_secret)
   // connecting mongodb
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect('index${process.env.MONGO_URL}')
 .then(()=>console.log('Database Connected'))
 .catch((err)=>console.log(err));
 //middleware to parse the data #global middleware
