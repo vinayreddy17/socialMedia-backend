@@ -39,8 +39,7 @@ const registerUser = async (req, res) => {
 
 const loginUser = async (req, res) => {
   try {
-    console.log(login);
-    console.log(process.env.JWT_SECRET);
+    
     const { email, password } = req.body;
 
     const user = await UserModel.findOne({ email });
@@ -68,7 +67,7 @@ const loginUser = async (req, res) => {
       );
     }
   } catch (error) {
-    return res.json(process.env.JWT_SECRET,{
+    return res.json({
       error: "passwords do not match",
        jwtSecret: process.env.JWT_SECRET
     });
@@ -77,8 +76,7 @@ const loginUser = async (req, res) => {
 
 const getProfile =(req,res)=>{
 const {token}=req.cookies;
-  console.log(profile);
-  console.log(process.env.JWT_SECRET);
+
 if(token){
   jwt.verify(token,process.env.JWT_SECRET,{},(err,user)=>{
     if(err) throw err;
