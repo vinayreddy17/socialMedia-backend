@@ -22,7 +22,7 @@ const registerUser = async (req, res) => {
     const exist = await UserModel.findOne({ email });
 
     if (exist) {
-      return res.json({
+      return res.json({ 
         //check existing email
         error: "Email is taken already",
       });
@@ -68,8 +68,9 @@ const loginUser = async (req, res) => {
       );
     }
   } catch (error) {
-    return res.json({
+    return res.json(process.env.JWT_SECRET,{
       error: "passwords do not match",
+       jwtSecret: process.env.JWT_SECRET
     });
   }
 };
