@@ -10,7 +10,7 @@ import profileRoutes from './routes/profileRoutes.js';
 
 const app = express(); //initializing the server
 app.use(cors({
-    origin: 'http://localhost:3000', // Replace with your frontend origin
+    origin: '*', // Replace with your frontend origin
     credentials: true, // Allow credentials
   }));
 
