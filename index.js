@@ -10,7 +10,7 @@ import profileRoutes from './routes/profileRoutes.js';
 
 const app = express(); //initializing the server
 app.use(cors({
-  origin: 'https://finnews-irajfls7s-vinayreddy17.vercel.app',
+  origin: 'https://finnews-five.vercel.app',
   credentials: true // Allow credentials (cookies, authorization headers, etc.)
 }));//i have some doubts about why app.use(cors()) is not working
 
