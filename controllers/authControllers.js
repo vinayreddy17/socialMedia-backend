@@ -2,7 +2,7 @@
 import UserModel from "../models/user.js";
 import { hashPassword, comparePassword } from "../helpers/auth.js";
 import jwt from "jsonwebtoken";
-
+import 'dotenv/config';
 
 
 const registerUser = async (req, res) => {
