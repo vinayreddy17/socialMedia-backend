@@ -14,7 +14,7 @@ app.use(cors({
   credentials: true // Allow credentials (cookies, authorization headers, etc.)
 }));//i have some doubts about why app.use(cors()) is not working
 console.log('index');
- console.log(process.env.JWT_secret)
+ // console.log(process.env.JWT_secret)
   // connecting mongodb
 mongoose.connect(process.env.MONGO_URL)
 .then(()=>console.log('Database Connected'))
