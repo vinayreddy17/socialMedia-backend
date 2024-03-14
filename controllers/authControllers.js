@@ -60,7 +60,7 @@ const loginUser = async (req, res) => {
         {},
         (err, token) => {
           if (err) throw err;
-        // console.log( res.cookie("token", token).json(user));
+         console.log( res.cookie("token", token).json(user));
           res.cookie("token", token).json(user);
           
         }
