@@ -69,7 +69,7 @@ const loginUser = async (req, res) => {
   } catch (error) {
     return res.json({
       error: "passwords do not match",
-       jwtSecret: process.env.JWT_SECRET
+       
     });
   }
 };
