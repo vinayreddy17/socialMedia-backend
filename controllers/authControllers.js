@@ -80,6 +80,7 @@ const {token}=req.cookies;
 if(token){
   jwt.verify(token,process.env.JWT_SECRET,{},(err,user)=>{
     if(err) throw err;
+    console.log(user);
     res.json(user)
   })
 }else {
