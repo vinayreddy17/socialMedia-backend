@@ -51,7 +51,7 @@ const loginUser = async (req, res) => {
     }
 
     const match = await comparePassword(password, user.password);
-   console.log(match);
+   
     if (match) {
       
       jwt.sign(
@@ -60,7 +60,7 @@ const loginUser = async (req, res) => {
         {},
         (err, token) => {
           if (err) throw err;
-         console.log( token);
+         
           res.cookie("token", token).json(user);
           
         }
