@@ -13,7 +13,7 @@ app.use(cors({
   origin: 'https://finnews-five.vercel.app',
   credentials: true // Allow credentials (cookies, authorization headers, etc.)
 }));//i have some doubts about why app.use(cors()) is not working
-console.log('index');
+// console.log('index');
  // console.log(process.env.JWT_secret)
   // connecting mongodb
 mongoose.connect(process.env.MONGO_URL)
